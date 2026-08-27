@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Media Queries - Min and Max Width</title>
+
+    <style>
+
+        /* =====================================
+           DEFAULT CSS
+           Applies to all screen sizes
+           ===================================== */
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 40px;
+            background-color: lightgray;
+        }
+
+        .box {
+            width: 60%;
+            margin: auto;
+            padding: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+
+        /* =====================================
+           MOBILE
+           Maximum width: 600px
+           ===================================== */
+
+        @media screen and (max-width: 600px) {
+
+            body {
+                background-color: lightgreen;
+                padding: 20px;
+            }
+
+            .box {
+                width: 90%;
+                background-color: green;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+
+        /* =====================================
+           TABLET
+           Minimum: 601px
+           Maximum: 992px
+           ===================================== */
+
+        @media screen and (min-width: 601px)
+                   and (max-width: 992px) {
+
+            body {
+                background-color: lightyellow;
+            }
+
+            .box {
+                width: 75%;
+                background-color: orange;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+
+        /* =====================================
+           DESKTOP
+           Minimum width: 993px
+           ===================================== */
+
+        @media screen and (min-width: 993px) {
+
+            body {
+                background-color: lightblue;
+            }
+
+            .box {
+                width: 60%;
+                background-color: navy;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Media Query Demonstration</h1>
+
+    <div class="box">
+        <h2>Responsive Web Design</h2>
+        <p>Resize the browser window!</p>
+    </div>
+
+</body>
+</html>

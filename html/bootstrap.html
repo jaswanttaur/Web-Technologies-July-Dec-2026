@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap Student Guide</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================================================
+     1. NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            Bootstrap Guide
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#grid">Grid</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#buttons">Buttons</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#cards">Cards</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#forms">Forms</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================================================
+     2. HEADER
+========================================================= -->
+
+<header class="bg-primary text-white text-center py-5">
+
+    <div class="container">
+
+        <h1 class="display-4">
+            Bootstrap 5 Guide
+        </h1>
+
+        <p class="lead">
+            Learn Bootstrap with simple examples
+        </p>
+
+        <button class="btn btn-light">
+            Start Learning
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     3. CONTAINER & GRID SYSTEM
+========================================================= -->
+
+<section id="grid" class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            1. Bootstrap Grid System
+        </h2>
+
+        <p class="text-center">
+            Bootstrap uses a 12-column responsive grid system.
+        </p>
+
+        <div class="row g-3">
+
+            <div class="col-12 col-md-6">
+                <div class="p-4 bg-light border text-center">
+                    <h4>Column 1</h4>
+                    <p>col-md-4</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="p-4 bg-light border text-center">
+                    <h4>Column 2</h4>
+                    <p>col-md-4</p>
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-md-4">
+                <div class="p-4 bg-light border text-center">
+                    <h4>Column 3</h4>
+                    <p>col-md-4</p>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="alert alert-info mt-4">
+
+            <strong>Remember:</strong>
+
+            <br>
+
+            col-12 → Mobile
+
+            <br>
+
+            col-md-4 → Medium and larger screens
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     4. BUTTONS
+========================================================= -->
+
+<section id="buttons" class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            2. Bootstrap Buttons
+        </h2>
+
+        <div class="text-center">
+
+            <button class="btn btn-primary">
+                Primary
+            </button>
+
+            <button class="btn btn-success">
+                Success
+            </button>
+
+            <button class="btn btn-danger">
+                Danger
+            </button>
+
+            <button class="btn btn-warning">
+                Warning
+            </button>
+
+            <button class="btn btn-info">
+                Info
+            </button>
+
+            <button class="btn btn-secondary">
+                Secondary
+            </button>
+
+        </div>
+
+        <div class="text-center mt-4">
+
+            <button class="btn btn-primary btn-lg">
+                Large Button
+            </button>
+
+            <button class="btn btn-primary">
+                Normal Button
+            </button>
+
+            <button class="btn btn-primary btn-sm">
+                Small Button
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     5. TYPOGRAPHY
+========================================================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            3. Typography
+        </h2>
+
+        <h1>Heading 1</h1>
+
+        <h2>Heading 2</h2>
+
+        <p class="lead">
+            This is a lead paragraph.
+        </p>
+
+        <p class="text-primary">
+            Primary text
+        </p>
+
+        <p class="text-success">
+            Success text
+        </p>
+
+        <p class="text-danger">
+            Danger text
+        </p>
+
+        <p class="text-center">
+            Center aligned text
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     6. CARDS
+========================================================= -->
+
+<section id="cards" class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            4. Bootstrap Cards
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            HTML
+                        </h5>
+
+                        <p class="card-text">
+                            HTML is used to create the structure
+                            of a web page.
+                        </p>
+
+                        <button class="btn btn-primary">
+                            Learn More
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            CSS
+                        </h5>
+
+                        <p class="card-text">
+                            CSS is used to style and design
+                            web pages.
+                        </p>
+
+                        <button class="btn btn-success">
+                            Learn More
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Bootstrap
+                        </h5>
+
+                        <p class="card-text">
+                            Bootstrap helps create responsive
+                            websites quickly.
+                        </p>
+
+                        <button class="btn btn-warning">
+                            Learn More
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     7. ALERTS
+========================================================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            5. Alerts
+        </h2>
+
+        <div class="alert alert-success">
+            Successfully completed!
+        </div>
+
+        <div class="alert alert-warning">
+            Please check your information.
+        </div>
+
+        <div class="alert alert-danger">
+            Something went wrong!
+        </div>
+
+        <div class="alert alert-info">
+            New information is available.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     8. FORM
+========================================================= -->
+
+<section id="forms" class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            6. Bootstrap Form
+        </h2>
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-6">
+
+                <form>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Student Name
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Enter your name">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email
+                        </label>
+
+                        <input type="email"
+                               class="form-control"
+                               placeholder="Enter your email">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Course
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Select Course</option>
+                            <option>CSE</option>
+                            <option>ECE</option>
+                            <option>ME</option>
+                            <option>CE</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mb-3 form-check">
+
+                        <input type="checkbox"
+                               class="form-check-input">
+
+                        <label class="form-check-label">
+                            I agree to the terms
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn btn-primary">
+
+                        Submit
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     9. TABLE
+========================================================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            7. Bootstrap Table
+        </h2>
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped table-hover">
+
+                <thead class="table-dark">
+
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>101</td>
+                        <td>Rahul</td>
+                        <td>CSE</td>
+                        <td>85</td>
+                    </tr>
+
+                    <tr>
+                        <td>102</td>
+                        <td>Simran</td>
+                        <td>CSE</td>
+                        <td>92</td>
+                    </tr>
+
+                    <tr>
+                        <td>103</td>
+                        <td>Aman</td>
+                        <td>ECE</td>
+                        <td>78</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     10. SPACING & FLEXBOX
+========================================================= -->
+
+<section class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-4">
+            8. Spacing & Flexbox
+        </h2>
+
+        <div class="d-flex justify-content-between
+                    align-items-center">
+
+            <h4 class="mb-0">
+                Student List
+            </h4>
+
+            <button class="btn btn-success">
+                Add Student
+            </button>
+
+        </div>
+
+        <div class="mt-4 p-4 border">
+
+            <p class="mb-0">
+                m = margin &nbsp;&nbsp; | &nbsp;&nbsp;
+                p = padding
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     11. MODAL
+========================================================= -->
+
+<section class="py-5">
+
+    <div class="container text-center">
+
+        <h2 class="mb-4">
+            9. Bootstrap Modal
+        </h2>
+
+        <button class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#studentModal">
+
+            Open Modal
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="studentModal">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Student Information
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                Welcome to Bootstrap!
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     12. FOOTER
+========================================================= -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+    <p class="mb-0">
+        Bootstrap Student Guide | Web Technologies
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
