@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Registration</h2>
+
+    <form id="studentForm">
+
+        <label>Name</label>
+        <input type="text" id="name">
+        <div id="nameError" class="error"></div>
+
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <div id="emailError" class="error"></div>
+
+
+        <label>Mobile Number</label>
+        <input type="text" id="mobile">
+        <div id="mobileError" class="error"></div>
+
+
+        <label>Age</label>
+        <input type="number" id="age">
+        <div id="ageError" class="error"></div>
+
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <div id="passwordError" class="error"></div>
+
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword">
+        <div id="confirmPasswordError" class="error"></div>
+
+
+        <label>Gender</label>
+
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <div id="genderError" class="error"></div>
+
+
+        <label>
+            <input type="checkbox" id="terms">
+            I agree to the Terms & Conditions
+        </label>
+
+        <div id="termsError" class="error"></div>
+
+
+        <button type="submit">Register</button>
+
+        <p id="successMessage" class="success"></p>
+
+    </form>
+
+</div>
+
+
+<script>
+
+const form = document.getElementById("studentForm");
+
+
+form.addEventListener("submit", function(event) {
+
+    // Prevent actual form submission
+    event.preventDefault();
+
+
+    // Get values
+    const name = document.getElementById("name").value.trim();
+
+    const email = document.getElementById("email").value.trim();
+
+    const mobile = document.getElementById("mobile").value.trim();
+
+    const age = document.getElementById("age").value;
+
+    const password = document.getElementById("password").value;
+
+    const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+    const gender = document.getElementById("gender").value;
+
+    const terms = document.getElementById("terms").checked;
+
+
+    // Clear previous messages
+
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("mobileError").innerText = "";
+    document.getElementById("ageError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+    document.getElementById("confirmPasswordError").innerText = "";
+    document.getElementById("genderError").innerText = "";
+    document.getElementById("termsError").innerText = "";
+    document.getElementById("successMessage").innerText = "";
+
+
+    let isValid = true;
+
+
+    // 1. Name validation
+
+    if (name === "") {
+
+        document.getElementById("nameError").innerText =
+            "Name is required.";
+
+        isValid = false;
+    }
+
+
+    // 2. Email validation
+
+    const emailPattern =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+
+        document.getElementById("emailError").innerText =
+            "Email is required.";
+
+        isValid = false;
+
+    } else if (!emailPattern.test(email)) {
+
+        document.getElementById("emailError").innerText =
+            "Enter a valid email address.";
+
+        isValid = false;
+    }
+
+
+    // 3. Mobile validation
+
+    const mobilePattern = /^[0-9]{10}$/;
+
+    if (mobile === "") {
+
+        document.getElementById("mobileError").innerText =
+            "Mobile number is required.";
+
+        isValid = false;
+
+    } else if (!mobilePattern.test(mobile)) {
+
+        document.getElementById("mobileError").innerText =
+            "Mobile number must contain exactly 10 digits.";
+
+        isValid = false;
+    }
+
+
+    // 4. Age validation
+
+    if (age === "") {
+
+        document.getElementById("ageError").innerText =
+            "Age is required.";
+
+        isValid = false;
+
+    } else if (age < 18 || age > 60) {
+
+        document.getElementById("ageError").innerText =
+            "Age must be between 18 and 60.";
+
+        isValid = false;
+    }
+
+
+    // 5. Password validation
+
+    if (password === "") {
+
+        document.getElementById("passwordError").innerText =
+            "Password is required.";
+
+        isValid = false;
+
+    } else if (password.length < 8) {
+
+        document.getElementById("passwordError").innerText =
+            "Password must contain at least 8 characters.";
+
+        isValid = false;
+    }
+
+
+    // 6. Confirm password validation
+
+    if (confirmPassword === "") {
+
+        document.getElementById("confirmPasswordError").innerText =
+            "Please confirm your password.";
+
+        isValid = false;
+
+    } else if (password !== confirmPassword) {
+
+        document.getElementById("confirmPasswordError").innerText =
+            "Passwords do not match.";
+
+        isValid = false;
+    }
+
+
+    // 7. Gender validation
+
+    if (gender === "") {
+
+        document.getElementById("genderError").innerText =
+            "Please select your gender.";
+
+        isValid = false;
+    }
+
+
+    // 8. Terms validation
+
+    if (!terms) {
+
+        document.getElementById("termsError").innerText =
+            "You must accept the Terms & Conditions.";
+
+        isValid = false;
+    }
+
+
+    // Final result
+
+    if (isValid) {
+
+        document.getElementById("successMessage").innerText =
+            "Registration successful!";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
